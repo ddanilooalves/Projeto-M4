@@ -17,7 +17,7 @@ class CreateTableDto {
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, swagger_1.ApiProperty)({
-        description: 'O nome e número de usuário',
+        description: 'O nome de usuário',
         example: "random_id",
     }),
     __metadata("design:type", String)

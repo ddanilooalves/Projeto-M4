@@ -14,8 +14,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TableController = void 0;
 const common_1 = require("@nestjs/common");
-const create_table_fto_1 = require("./dto/create-table.fto");
+const create_table_dto_1 = require("./dto/create-table.dto");
 const table_service_1 = require("./table.service");
+const swagger_1 = require("@nestjs/swagger");
 let TableController = class TableController {
     constructor(tableService) {
         this.tableService = tableService;
@@ -37,10 +38,11 @@ __decorate([
     (0, common_1.Post)(),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [create_table_fto_1.CreateTableDto]),
+    __metadata("design:paramtypes", [create_table_dto_1.CreateTableDto]),
     __metadata("design:returntype", void 0)
 ], TableController.prototype, "create", null);
 TableController = __decorate([
+    (0, swagger_1.ApiTags)('table'),
     (0, common_1.Controller)('table'),
     __metadata("design:paramtypes", [table_service_1.TableService])
 ], TableController);

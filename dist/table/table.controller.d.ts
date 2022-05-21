@@ -1,4 +1,4 @@
-import { CreateTableDto } from './dto/create-table.fto';
+import { CreateTableDto } from './dto/create-table.dto';
 import { TableService } from './table.service';
 export declare class TableController {
     private tableService;

@@ -1,4 +1,4 @@
-import { CreateTableDto } from './dto/create-table.fto';
+import { CreateTableDto } from './dto/create-table.dto';
 import { Table } from './entities/table.entity';
 export declare class TableService {
     tables: Table[];

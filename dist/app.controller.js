@@ -28,8 +28,8 @@ __decorate([
     __metadata("design:returntype", String)
 ], AppController.prototype, "getAppStatus", null);
 AppController = __decorate([
-    (0, swagger_1.ApiTags)('status'),
-    (0, common_1.Controller)(),
+    (0, swagger_1.ApiTags)('Status'),
+    (0, common_1.Controller)("link"),
     __metadata("design:paramtypes", [app_service_1.AppService])
 ], AppController);
 exports.AppController = AppController;

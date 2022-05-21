@@ -27,6 +27,8 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+To clone the project to your machine, just copy the code informed in git through the "Code" tab next to "Add file".
+When copying the code, just go to your folder created in your files and open the "Git Bash" command prompt and run the command "git clone https://(code)"
 
 ## Installation
 
@@ -45,19 +47,6 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
 
 ## Support

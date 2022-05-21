@@ -8,5 +8,6 @@ export class CreateTableDto {
     description: 'O número do usuário',
     example: 1,
   })
+  id: string;
   number: number;
 }

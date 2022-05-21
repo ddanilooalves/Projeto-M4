@@ -21,7 +21,7 @@ __decorate([
         description: 'O número do usuário',
         example: 1,
     }),
-    __metadata("design:type", Number)
-], CreateTableDto.prototype, "number", void 0);
+    __metadata("design:type", String)
+], CreateTableDto.prototype, "id", void 0);
 exports.CreateTableDto = CreateTableDto;
 //# sourceMappingURL=create-table.dto.js.map

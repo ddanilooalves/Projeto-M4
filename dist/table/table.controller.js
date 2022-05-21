@@ -29,21 +29,21 @@ let TableController = class TableController {
     }
 };
 __decorate([
-    (0, common_1.Get)(),
+    (0, common_1.Get)('findAll'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], TableController.prototype, "findAll", null);
 __decorate([
-    (0, common_1.Post)(),
+    (0, common_1.Post)('create'),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_table_dto_1.CreateTableDto]),
     __metadata("design:returntype", void 0)
 ], TableController.prototype, "create", null);
 TableController = __decorate([
-    (0, swagger_1.ApiTags)('table'),
-    (0, common_1.Controller)('table'),
+    (0, swagger_1.ApiTags)('Users'),
+    (0, common_1.Controller)(),
     __metadata("design:paramtypes", [table_service_1.TableService])
 ], TableController);
 exports.TableController = TableController;

@@ -15,11 +15,10 @@ const swagger_1 = require("@nestjs/swagger");
 class CreateTableDto {
 }
 __decorate([
-    (0, class_validator_1.IsNumber)(),
-    (0, class_validator_1.IsPositive)(),
+    (0, class_validator_1.IsString)(),
     (0, swagger_1.ApiProperty)({
-        description: 'O número do usuário',
-        example: 1,
+        description: 'O nome e número de usuário',
+        example: "random_id",
     }),
     __metadata("design:type", String)
 ], CreateTableDto.prototype, "id", void 0);

@@ -16,7 +16,7 @@ let TableService = class TableService {
         return this.tables;
     }
     create(createTableDto) {
-        const table = Object.assign({ id: 'random_id' }, createTableDto);
+        const table = Object.assign(Object.assign({}, createTableDto), { number: 0 });
         this.tables.push(table);
         return table;
     }

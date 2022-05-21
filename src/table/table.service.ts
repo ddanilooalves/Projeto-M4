@@ -11,7 +11,10 @@ export class TableService {
   }
 
   create(createTableDto: CreateTableDto) {
-    const table: Table = { id: 'random_id', ...createTableDto };
+    const table: Table = {
+      ...createTableDto,
+      number: 0
+    };
 
     this.tables.push(table);
 

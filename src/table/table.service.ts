@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { CreateTableDto } from './dto/create-table.dto';
+import { CreateUserDto } from './dto/create-table.dto';
 import { Table } from './entities/table.entity';
 
 @Injectable()
@@ -10,7 +10,7 @@ export class TableService {
     return this.tables;
   }
 
-  create(createTableDto: CreateTableDto) {
+  create(createTableDto: CreateUserDto) {
     const table: Table = {
       ...createTableDto,
       number: 0

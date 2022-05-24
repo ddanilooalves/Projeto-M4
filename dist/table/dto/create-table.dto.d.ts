@@ -1,3 +1,3 @@
-export declare class CreateTableDto {
+export declare class CreateUserDto {
     id: string;
 }

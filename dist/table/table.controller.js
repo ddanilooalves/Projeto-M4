@@ -38,7 +38,7 @@ __decorate([
     (0, common_1.Post)('create'),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [create_table_dto_1.CreateTableDto]),
+    __metadata("design:paramtypes", [create_table_dto_1.CreateUserDto]),
     __metadata("design:returntype", void 0)
 ], TableController.prototype, "create", null);
 TableController = __decorate([

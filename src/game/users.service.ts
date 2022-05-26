@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { CreateUserDto } from './dto/create-game.dto';
-import { Table } from './entities/game.entity';
+import { CreateUserDto } from './dto/create-users.dto';
+import { Table } from './entities/users.entity';
 
 @Injectable()
 export class TableService {

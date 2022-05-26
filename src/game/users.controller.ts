@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
-import { CreateUserDto } from './dto/create-game.dto';
-import { TableService } from './game.service';
+import { CreateUserDto } from './dto/create-users.dto';
+import { TableService } from './users.service';
 import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags('Users')

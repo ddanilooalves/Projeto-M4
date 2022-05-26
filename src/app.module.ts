@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { TableModule } from './game/game.module';
+import { TableModule } from './game/users.module';
 
 @Module({
   imports: [TableModule],

@@ -1,4 +1,4 @@
-export class Table {
+export class Users {
     id: string;
     number: number;
   }

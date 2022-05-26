@@ -1,17 +1,17 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-users.dto';
-import { Table } from './entities/users.entity';
+import { Users } from './entities/users.entity';
 
 @Injectable()
-export class TableService {
-  tables: Table[] = [];
+export class UsersService {
+  tables: Users[] = [];
 
   findAll() {
     return this.tables;
   }
 
   create(createTableDto: CreateUserDto) {
-    const table: Table = {
+    const table: Users = {
       ...createTableDto,
       number: 0
     };

@@ -15,12 +15,13 @@ const swagger_1 = require("@nestjs/swagger");
 class CreateUsersDto {
 }
 __decorate([
-    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsPositive)(),
     (0, swagger_1.ApiProperty)({
-        description: 'O nome de usuário',
-        example: "random_id",
+        description: 'O número do usuário',
+        example: 1,
     }),
-    __metadata("design:type", String)
-], CreateUsersDto.prototype, "id", void 0);
+    __metadata("design:type", Number)
+], CreateUsersDto.prototype, "number", void 0);
 exports.CreateUsersDto = CreateUsersDto;
 //# sourceMappingURL=create-users.dto.js.map

@@ -24,22 +24,41 @@ let UsersController = class UsersController {
     findAll() {
         return this.usersService.findAll();
     }
-    create(createUsersDto) {
-        return this.usersService.create(createUsersDto);
+    findOne(id) {
+        return this.usersService.findOne(id);
+    }
+    create(dto) {
+        return this.usersService.create(dto);
     }
 };
 __decorate([
-    (0, common_1.Get)('findAll'),
+    (0, common_1.Get)(),
+    (0, swagger_1.ApiOperation)({
+        summary: 'Listar todos os usuários',
+    }),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], UsersController.prototype, "findAll", null);
 __decorate([
+    (0, common_1.Get)(':id'),
+    (0, swagger_1.ApiOperation)({
+        summary: 'Visualizar um usuário',
+    }),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], UsersController.prototype, "findOne", null);
+__decorate([
     (0, common_1.Post)('create'),
+    (0, swagger_1.ApiOperation)({
+        summary: 'Criar um usuário',
+    }),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_users_dto_1.CreateUsersDto]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], UsersController.prototype, "create", null);
 UsersController = __decorate([
     (0, swagger_1.ApiTags)('Users'),

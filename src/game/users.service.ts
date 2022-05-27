@@ -5,22 +5,21 @@ import { Users } from './entities/users.entity';
 
 @Injectable()
 export class UsersService {
-  tables: Users[] = [];
-
   constructor(private readonly prisma: PrismaService) {}
 
-  findAll() {
-    return this.prisma.table.findMany();
+  findAll(): Promise<Users[]> {
+    return this.prisma.games.findMany();
   }
 
-  create(createUsersDto: CreateUsersDto) {
-    const table: Users = {
-      ...createUsersDto,
-      number: 0
+  findOne(id: string): Promise<Users> {
+    return this.prisma.games.findUnique({ where: { id }});
+  }
+
+  create(dto: CreateUsersDto): Promise<Users> {
+    const data: Users = {
+      ...dto
     };
 
-    this.tables.push(table);
-
-    return table;
+    return this.prisma.games.create({ data });
   }
 }

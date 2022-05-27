@@ -1,8 +1,10 @@
 import { CreateUsersDto } from './dto/create-users.dto';
+import { Users } from './entities/users.entity';
 import { UsersService } from './users.service';
 export declare class UsersController {
-    private usersService;
+    private readonly usersService;
     constructor(usersService: UsersService);
-    findAll(): any;
-    create(createUsersDto: CreateUsersDto): import("./entities/users.entity").Users;
+    findAll(): Promise<Users[]>;
+    findOne(id: string): Promise<Users>;
+    create(dto: CreateUsersDto): Promise<Users>;
 }

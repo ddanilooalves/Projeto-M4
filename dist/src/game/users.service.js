@@ -15,15 +15,16 @@ const prisma_service_1 = require("../../prisma/prisma/prisma.service");
 let UsersService = class UsersService {
     constructor(prisma) {
         this.prisma = prisma;
-        this.tables = [];
     }
     findAll() {
-        return this.prisma.table.findMany();
+        return this.prisma.games.findMany();
     }
-    create(createUsersDto) {
-        const table = Object.assign(Object.assign({}, createUsersDto), { number: 0 });
-        this.tables.push(table);
-        return table;
+    findOne(id) {
+        return this.prisma.games.findUnique({ where: { id } });
+    }
+    create(dto) {
+        const data = Object.assign({}, dto);
+        return this.prisma.games.create({ data });
     }
 };
 UsersService = __decorate([

@@ -1,9 +1,9 @@
 export declare class Users {
     id?: string;
-    number: Number;
+    number: number;
     name: String;
     email: String;
     password: String;
-    cpf: Number;
+    cpf: number;
     isAdmin: String;
 }

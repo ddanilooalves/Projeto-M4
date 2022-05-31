@@ -19,7 +19,14 @@ __decorate([
     (0, class_validator_1.IsPositive)(),
     (0, swagger_1.ApiProperty)({
         description: 'Insira os dados',
-        example: 0,
+        example: {
+            number: 0,
+            name: '',
+            email: '',
+            password: '',
+            cpf: 0,
+            isAdmin: ''
+        }
     }),
     __metadata("design:type", Number)
 ], CreateUsersDto.prototype, "number", void 0);

@@ -17,6 +17,7 @@ const common_1 = require("@nestjs/common");
 const create_users_dto_1 = require("./dto/create-users.dto");
 const users_service_1 = require("./users.service");
 const swagger_1 = require("@nestjs/swagger");
+const update_table_dto_1 = require("./dto/update-table.dto");
 let UsersController = class UsersController {
     constructor(usersService) {
         this.usersService = usersService;
@@ -26,6 +27,9 @@ let UsersController = class UsersController {
     }
     findOne(id) {
         return this.usersService.findOne(id);
+    }
+    update(id, dto) {
+        return this.usersService.update(id, dto);
     }
     create(dto) {
         return this.usersService.create(dto);
@@ -50,6 +54,17 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], UsersController.prototype, "findOne", null);
+__decorate([
+    (0, common_1.Patch)(':id'),
+    (0, swagger_1.ApiOperation)({
+        summary: 'Editar um usuário pelo ID',
+    }),
+    __param(0, (0, common_1.Param)('id')),
+    __param(1, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, update_table_dto_1.UpdateUsersDto]),
+    __metadata("design:returntype", Promise)
+], UsersController.prototype, "update", null);
 __decorate([
     (0, common_1.Post)('create'),
     (0, swagger_1.ApiOperation)({

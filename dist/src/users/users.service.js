@@ -26,6 +26,13 @@ let UsersService = class UsersService {
         const data = Object.assign(Object.assign({}, dto), { number: 0, name: '', email: '', password: '', cpf: 0, isAdmin: '' });
         return this.prisma.user.create({ data });
     }
+    update(id, dto) {
+        const data = Object.assign({}, dto);
+        return this.prisma.user.update({
+            where: { id },
+            data,
+        });
+    }
 };
 UsersService = __decorate([
     (0, common_1.Injectable)(),

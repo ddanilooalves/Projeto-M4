@@ -8,18 +8,24 @@ export class UsersService {
   constructor(private readonly prisma: PrismaService) {}
 
   findAll(): Promise<Users[]> {
-    return this.prisma.games.findMany();
+    return this.prisma.user.findMany();
   }
 
   findOne(id: string): Promise<Users> {
-    return this.prisma.games.findUnique({ where: { id }});
+    return this.prisma.user.findUnique({ where: { id } });
   }
 
   create(dto: CreateUsersDto): Promise<Users> {
     const data: Users = {
-      ...dto
+      ...dto,
+      number: 0,
+      name: '',
+      email: '',
+      password: '',
+      cpf: 0,
+      isAdmin: '',
     };
-
-    return this.prisma.games.create({ data });
+ 
+    return this.prisma.user.create({ data });
   }
 }

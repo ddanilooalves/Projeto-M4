@@ -1,12 +1,12 @@
-import { IsNumber, IsPositive } from 'class-validator';
+import { IsNumber, IsPositive, IsString } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateUsersDto {
   @IsNumber()
   @IsPositive()
   @ApiProperty({
-    description: 'O número do usuário',
-    example: 1,
+    description: 'Insira os dados',
+    example: 0,
   })
   number: number;
 }

@@ -1,9 +1,9 @@
-export declare class Users {
+export class Users {
     id?: string;
     number: Number;
     name: String;
     email: String;
     password: String;
     cpf: Number;
-    isAdmin: String;
-}
+    isAdmin: String
+  }

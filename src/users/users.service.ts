@@ -21,7 +21,7 @@ export class UsersService {
       ...dto,
     };
  
-    return this.prisma.user.create({ data });
+    return this.prisma.user.create({ data })
   }
 
   update(id: string, dto: UpdateUsersDto): Promise<Users> {

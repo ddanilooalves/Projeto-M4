@@ -19,16 +19,9 @@ __decorate([
     (0, class_validator_1.IsPositive)(),
     (0, swagger_1.ApiProperty)({
         description: 'Insira os dados',
-        examples: [{
-                number: 0,
-                name: '',
-                email: '',
-                password: '',
-                cpf: 0,
-                isAdmin: ''
-            }]
+        example: 0,
     }),
-    __metadata("design:type", Object)
+    __metadata("design:type", Number)
 ], CreateUsersDto.prototype, "number", void 0);
 exports.CreateUsersDto = CreateUsersDto;
 //# sourceMappingURL=create-users.dto.js.map

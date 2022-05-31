@@ -28,7 +28,7 @@ __decorate([
                 isAdmin: ''
             }]
     }),
-    __metadata("design:type", Number)
+    __metadata("design:type", Object)
 ], CreateUsersDto.prototype, "number", void 0);
 exports.CreateUsersDto = CreateUsersDto;
 //# sourceMappingURL=create-users.dto.js.map

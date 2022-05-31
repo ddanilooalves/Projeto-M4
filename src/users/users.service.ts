@@ -19,12 +19,6 @@ export class UsersService {
   create(dto: CreateUsersDto): Promise<Users> {
     const data: Users = {
       ...dto,
-      number: 0,
-      name: '',
-      email: '',
-      password: '',
-      cpf: 0,
-      isAdmin: '',
     };
  
     return this.prisma.user.create({ data });

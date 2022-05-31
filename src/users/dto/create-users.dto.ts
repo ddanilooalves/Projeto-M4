@@ -6,14 +6,14 @@ export class CreateUsersDto {
   @IsPositive()
   @ApiProperty({
     description: 'Insira os dados',
-    example: {
+    examples: [{
     number: 0,
     name: '',
     email: '',
     password: '',
     cpf: 0,
     isAdmin: ''
-    }
+  }]
   })
   number: number;
   name: String;

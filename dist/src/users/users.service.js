@@ -23,7 +23,7 @@ let UsersService = class UsersService {
         return this.prisma.user.findUnique({ where: { id } });
     }
     create(dto) {
-        const data = Object.assign(Object.assign({}, dto), { number: 0, name: '', email: '', password: '', cpf: 0, isAdmin: '' });
+        const data = Object.assign({}, dto);
         return this.prisma.user.create({ data });
     }
     update(id, dto) {

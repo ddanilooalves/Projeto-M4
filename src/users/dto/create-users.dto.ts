@@ -15,10 +15,5 @@ export class CreateUsersDto {
     isAdmin: ''
   }]
   })
-  number: number;
-  name: String;
-  email: String;
-  password: String;
-  cpf: number;
-  isAdmin: String
+  number: any;
 }
